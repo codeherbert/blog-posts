@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 import App from './App';
 
+// hooks up middleware to the Redux store
 const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
