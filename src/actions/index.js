@@ -1,6 +1,13 @@
 import jsonPlaceholder from '../apis/jsonPlaceholder';
+import _ from 'lodash';
 
 // use Redux Thunk middleware to return a function with a dispatch argument
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+    await dispatch(fetchPosts());
+    const userIds = _.uniq(_.map(getState().posts, 'userId'));
+    userIds.forEach(id => dispatch(fetchUser(id)));
+}
+
 export const fetchPosts = () => async dispatch => {    
     const response = await jsonPlaceholder.get('/posts');
 
