@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 // import { fetchUser } from '../actions';
 
 class UserHeader extends Component {
+    // No longer necessary for component to fetch own data
     // componentDidMount() {
     //     this.props.fetchUser(this.props.userId);
     // }
@@ -23,5 +24,6 @@ const mapStateToProps = (state, ownProps) => {
     return {user: state.users.find( user => user.id === ownProps.userId)};
 }
 
+// No longer necessary for component to fetch own data
 // export default connect (mapStateToProps, { fetchUser })(UserHeader);
 export default connect (mapStateToProps)(UserHeader);
