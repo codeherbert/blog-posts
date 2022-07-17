@@ -1,0 +1,41 @@
+.Blog-App {
+  background-color: #fff5ee;
+  padding: 20px 10px;
+}
+
+.Blog-App h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.Blog-App > h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.PostList.list {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.PostList.list .item {
+  border: 3px solid #000000 !important;
+  box-shadow: 7px 5px 5px #c0c0c0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.PostList.list .item:nth-of-type(odd) {
+  background-color: #30d5c8;
+}
+
+.PostList.list .item:nth-of-type(even) {
+  background-color: lightgoldenrodyellow;
+}
+
+.PostList.list .item h2 {
+  text-transform: capitalize;
+}
