@@ -27,7 +27,7 @@ class PostList extends Component {
 
     render() {
         return (
-            <div className="ui relaxed divided list">{this.renderList()}</div>
+            <div className="PostList ui relaxed divided list">{this.renderList()}</div>
         )
     };
 };
